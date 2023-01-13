@@ -16,12 +16,45 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+const mod = (`
+  <div 
+        x-data="{ open: false }"
+        x-show.transition.duration.500ms="open"
+        x-init="() => { setTimeout(() => { open = true }, 3000); }"
+        class="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center px-4 md:px-0"
+    >
+        <div class="flex flex-col max-w-lg bg-white shadow-2xl rounded-lg border-2 border-gray-400 p-6" @click.away="open = false">
+            <div class="flex justify-between mb-4">
+                <h3 class="font-bold text-2xl">Welcome! 🚀</h3>
+                <button @click="open = false">
+                    <svg version="1.1" id="Capa_1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+                                    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+                                    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+                                    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+                                    L284.286,256.002z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <p class="text-center mb-6">Your content goes here! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu rutrum lorem.</p>
+                <img class="w-full h-64" src="https://images.pexels.com/photos/954599/pexels-photo-954599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            </div>
+        </div>
+    </div>`
+)
+
 export function StoreFront() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="bg-white">
-
+      
       {/* Mobile menu */}
       <Transition.Root show={mobileMenuOpen} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setMobileMenuOpen}>
@@ -182,15 +215,15 @@ export function StoreFront() {
 
             {/* Secondary navigation */}
             <div className="bg-white bg-opacity-10 backdrop-blur-md backdrop-filter">
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl px-4 sm:px-4 lg:px-8">
                 <div>
                   <div className="flex h-16 items-center justify-between">
                     {/* Logo (lg+) */}
                     <div className="hidden lg:flex lg:flex-1 lg:items-center">
                       <a href="#">
-                        <span className="sr-only">asdfadsfasdfasdfasdfa</span>
+                        <span className="sr-only">tailwind SERVICES</span>
                         <Image width="500" height="300"
-                          className="h-8 w-auto"
+                          className="h-8 w-auto md:inline-block  hidden "
                           src={services[0].imageSrc}
                           alt=""
                         />
@@ -296,7 +329,7 @@ export function StoreFront() {
                     </div>
 
                     {/* Logo (lg-) */}
-                    <a href="#" className="lg:hidden">
+                    <a href="#" className="hidden">
                       <span className="sr-only">Your Company</span>
                       <Image width="500" height="300" src={services[2].imageSrc}  />
                     </a>
@@ -355,26 +388,22 @@ export function StoreFront() {
             <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
               Shop by Category
             </h2>
-            <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
-              Browse all services
-              <span aria-hidden="true"> &rarr;</span>
-            </a>
+          
           </div>
 
           <div className="mt-4 flow-root">
-            <div className="-my-2">
-              <div className=" h-80 overflow-x-auto py-2 xl:overflow-visible">
-                <div className=" flex flex-wrap grid-cols-3 space-x-20 px-4 sm:px-6 lg:px-8   xl:relative xl:grid gap-x-8 xl:space-x-0 xl:px-0">
-
+            <div className="-my-2 items-center">
+              <div className="flex h-90 items-center py-2 justify-center">
+<div className="flex flex-row items-center">
                   {/*                 map                   */}
                   {services.map((category) => (
                     <a
                       key={category.name}
                       href={category.href}
-                      className="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
+                      className="relative flex h-40 w-56 m-2 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
                     >
-                      <span aria-hidden="true" className="absolute inset-0">
-                        <Image width="500" height="300" src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
+                      <span aria-hidden="true" className="absolute inset-0 p-2">
+                        <Image width="80" height="300" src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
                       </span>
                       <span
                         aria-hidden="true"
