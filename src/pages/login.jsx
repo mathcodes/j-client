@@ -10,7 +10,7 @@ export default function Login() {
   return (
     <>
       <Head>
-        <title>Sign In - TaxPal</title>
+        <title>Sign In - Joe's Corner</title>
       </Head>
       <AuthLayout>
         <div className="flex flex-col">

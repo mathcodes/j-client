@@ -5,6 +5,7 @@ import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import { StoreFront } from '@/components/StoreFront'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
@@ -13,22 +14,23 @@ import { Testimonials } from '@/components/Testimonials'
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>TaxPal - Accounting made simple for small businesses</title>
+      {/* <Head>
+        <title>Joe's Corner</title>
         <meta
           name="description"
           content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
         />
       </Head>
-      <Header />
+      <Header /> */}
       <main>
-        <Hero />
+        {/* <Hero />
         <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />
         <Testimonials />
         <Pricing />
-        <Faqs />
+        <Faqs /> */}
+        <StoreFront />
       </main>
       <Footer />
     </>
