@@ -8,6 +8,6 @@ const nextConfig = {
 // configure "cdn.pixabay.com" under images in your `next.config.js`
 module.exports = {
   images: {
-    domains: ['cdn.pixabay.com'],
+    domains: ['cdn.pixabay.com', 'raw.githubusercontent.com'],
   },
 }

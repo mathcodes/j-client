@@ -1,62 +1,90 @@
 export const currencies = ['CAD', 'USD', 'AUD', 'EUR', 'GBP']
 export const navigation = {
-  categories: [
+  services: [
     {
-      name: 'Women',
+      name: 'Original',
       featured: [
         {
-          name: 'New Arrivals',
+          name: 'Painting #1',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
         {
-          name: 'Basic Tees',
+          name: 'Painting #2',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
         {
-          name: 'Accessories',
+          name: 'Painting #3',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
         {
-          name: 'Carry',
+          name: 'Painting #4',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt: 'Model opening tan leather long wallet with credit card pockets and cash pouch.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
       ],
     },
     {
-      name: 'Men',
+      name: 'Joe Style',
       featured: [
         {
-          name: 'New Arrivals',
+          name: 'Painting #1',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt: 'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
         {
-          name: 'Basic Tees',
+          name: 'Painting #2',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt: 'Model wearing light heather gray t-shirt.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
         {
-          name: 'Accessories',
+          name: 'Painting #3',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt:
-            'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
         {
-          name: 'Carry',
+          name: 'Painting #4',
           href: '#',
-          imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-          imageAlt: 'Model putting folded cash into slim card holder olive leather wallet with hand stitching.',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+        },
+      ],
+    },
+    {
+      name: 'Joe Style',
+      featured: [
+        {
+          name: 'Painting #1',
+          href: '#',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+        },
+        {
+          name: 'Painting #2',
+          href: '#',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+        },
+        {
+          name: 'Painting #3',
+          href: '#',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+        },
+        {
+          name: 'Painting #4',
+          href: '#',
+          imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+          imageAlt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         },
       ],
     },
@@ -66,61 +94,90 @@ export const navigation = {
     { name: 'Stores', href: '#' },
   ],
 }
-export const categories = [
+export const services = [
   {
-    name: 'New Arrivals',
+    name: 'Custom Paintings',
     href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
   },
   {
-    name: 'Productivity',
+    name: 'Joe\'s Art',
     href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
   },
   {
-    name: 'Workspace',
+    name: 'Originals',
     href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-  },
-  {
-    name: 'Accessories',
-    href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
-  },
-  { name: 'Sale', href: '#', imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png'}
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+  }
 ]
 export const collections = [
   {
-    name: 'Handcrafted Collection',
+    name: '7',
     href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
     imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
-    description: 'Keep your phone, keys, and wallet together, so you can lose everything at once.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
   },
   {
-    name: 'Organized Desk Collection',
+    name: '3',
     href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
     imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
-    description: 'The rest of the house will still be a mess, but your desk will look great.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
   },
   {
-    name: 'Focus Collection',
+    name: '6',
     href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2017/02/09/13/52/number-2052171_960_720.png',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
     imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
-    description: 'Be more productive than enterprise project managers with a single piece of paper.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  },
+  {
+    name: '5',
+    href: '#',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+    imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  },
+  {
+    name: '4',
+    href: '#',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+    imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  },
+  {
+    name: '2',
+    href: '#',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+    imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  },
+  {
+    name: '1',
+    href: '#',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+    imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  },
+  {
+    name: '8',
+    href: '#',
+    imageSrc: 'https://cdn.pixabay.com/photo/2019/02/14/07/28/painting-3995999_960_720.jpg',
+    imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
   },
 ]
 export const footerNavigation = {
-  shop: [
+  Original: [
     { name: 'Bags', href: '#' },
     { name: 'Tees', href: '#' },
     { name: 'Objects', href: '#' },
     { name: 'Home Goods', href: '#' },
     { name: 'Accessories', href: '#' },
   ],
-  company: [
+  JoeStyle: [
     { name: 'Who we are', href: '#' },
     { name: 'Sustainability', href: '#' },
     { name: 'Press', href: '#' },
@@ -128,7 +185,7 @@ export const footerNavigation = {
     { name: 'Terms & Conditions', href: '#' },
     { name: 'Privacy', href: '#' },
   ],
-  account: [
+  Custom: [
     { name: 'Manage Account', href: '#' },
     { name: 'Returns & Exchanges', href: '#' },
     { name: 'Redeem a Gift Card', href: '#' },
