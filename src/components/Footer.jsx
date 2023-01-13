@@ -23,7 +23,7 @@ export function Footer() {
             <Link
               href="https://twitter.com"
               className="group"
-              aria-label="Joe's Corner on Twitter"
+              aria-label="Joes Corner on Twitter"
             >
               <svg
                 aria-hidden="true"
@@ -35,7 +35,7 @@ export function Footer() {
             <Link
               href="https://github.com"
               className="group"
-              aria-label="Joe's Corner on GitHub"
+              aria-label="Joes Corner on GitHub"
             >
               <svg
                 aria-hidden="true"

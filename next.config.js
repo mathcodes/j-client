@@ -5,5 +5,9 @@ const nextConfig = {
     scrollRestoration: true,
   },
 }
-
-module.exports = nextConfig
+// configure "cdn.pixabay.com" under images in your `next.config.js`
+module.exports = {
+  images: {
+    domains: ['cdn.pixabay.com'],
+  },
+}

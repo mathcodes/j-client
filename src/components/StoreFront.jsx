@@ -1,5 +1,6 @@
 import { footerNavigation, collections, categories, navigation, currencies } from '../data/data'
 import { Fragment, useState } from 'react'
+import Image from 'next/image'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -60,6 +61,8 @@ export function StoreFront() {
                 <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200">
                     <Tab.List className="-mb-px flex space-x-8 px-4">
+
+                      {/* map */}
                       {navigation.categories.map((category) => (
                         <Tab
                           key={category.name}
@@ -76,13 +79,16 @@ export function StoreFront() {
                     </Tab.List>
                   </div>
                   <Tab.Panels as={Fragment}>
+
+                    {/* map */}
                     {navigation.categories.map((category) => (
                       <Tab.Panel key={category.name} className="space-y-12 px-4 py-6">
                         <div className="grid grid-cols-2 gap-x-4 gap-y-10">
+                          {/* map */}
                           {category.featured.map((item) => (
                             <div key={item.name} className="group relative">
                               <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
+                                <Image width="5" height="5" src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                               </div>
                               <a href={item.href} className="mt-6 block text-sm font-medium text-gray-900">
                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
@@ -100,6 +106,8 @@ export function StoreFront() {
                 </Tab.Group>
 
                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
+
+                  {/* map */}
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
@@ -135,6 +143,7 @@ export function StoreFront() {
                           name="currency"
                           className="flex items-center rounded-md border-transparent bg-none py-0.5 pl-2 pr-5 text-sm font-medium text-gray-700 focus:border-transparent focus:outline-none focus:ring-0 group-hover:text-gray-800"
                         >
+                          {/* map */}
                           {currencies.map((currency) => (
                             <option key={currency}>{currency}</option>
                           ))}
@@ -156,8 +165,8 @@ export function StoreFront() {
       <div className="relative bg-gray-900">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          <img
-            src="https://tailwindui.com/img/ecommerce-images/home-page-01-hero-full-width.jpg"
+          <Image width="5" height="5"
+            src={categories[3].imageSrc}
             alt=""
             className="h-full w-full object-cover object-center"
           />
@@ -178,9 +187,9 @@ export function StoreFront() {
                     <div className="hidden lg:flex lg:flex-1 lg:items-center">
                       <a href="#">
                         <span className="sr-only">Your Company</span>
-                        <img
+                        <Image width="5" height="5"
                           className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                          src={categories[0].imageSrc}
                           alt=""
                         />
                       </a>
@@ -190,6 +199,8 @@ export function StoreFront() {
                       {/* Flyout menus */}
                       <Popover.Group className="inset-x-0 bottom-0 px-4">
                         <div className="flex h-full justify-center space-x-8">
+
+                          {/* map */}
                           {navigation.categories.map((category) => (
                             <Popover key={category.name} className="flex">
                               {({ open }) => (
@@ -223,10 +234,12 @@ export function StoreFront() {
                                       <div className="relative bg-white">
                                         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                                           <div className="grid grid-cols-4 gap-y-10 gap-x-8 py-16">
+                                            
+                                            {/* map */}
                                             {category.featured.map((item) => (
                                               <div key={item.name} className="group relative">
                                                 <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                                  <img
+                                                  <Image width="5" height="5"
                                                     src={item.imageSrc}
                                                     alt={item.imageAlt}
                                                     className="object-cover object-center"
@@ -251,6 +264,8 @@ export function StoreFront() {
                             </Popover>
                           ))}
 
+
+                          {/* map */}
                           {navigation.pages.map((page) => (
                             <a
                               key={page.name}
@@ -281,7 +296,7 @@ export function StoreFront() {
                     {/* Logo (lg-) */}
                     <a href="#" className="lg:hidden">
                       <span className="sr-only">Your Company</span>
-                      <img src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="" className="h-8 w-auto" />
+                      <Image width="5" height="5" src={categories[2].imageSrc}  />
                     </a>
 
                     <div className="flex flex-1 items-center justify-end">
@@ -320,7 +335,7 @@ export function StoreFront() {
           <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">New arrivals are here</h1>
           <p className="mt-4 text-xl text-white">
             The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release
-            while they're still in stock.
+            while they`&rsquo;`re still in stock.
           </p>
           <a
             href="#"
@@ -348,6 +363,8 @@ export function StoreFront() {
             <div className="-my-2">
               <div className="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
                 <div className="min-w-screen-xl absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+
+                  {/* map */}
                   {categories.map((category) => (
                     <a
                       key={category.name}
@@ -355,7 +372,7 @@ export function StoreFront() {
                       className="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
                     >
                       <span aria-hidden="true" className="absolute inset-0">
-                        <img src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
+                        <Image width="5" height="5" src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
                       </span>
                       <span
                         aria-hidden="true"
@@ -384,8 +401,8 @@ export function StoreFront() {
         >
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/home-page-01-feature-section-01.jpg"
+              <Image width="5" height="5"
+                src={categories[0].imageSrc}
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
@@ -425,13 +442,15 @@ export function StoreFront() {
           </p>
 
           <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+
+            {/* map */}
             {collections.map((collection) => (
               <a key={collection.name} href={collection.href} className="group block">
                 <div
                   aria-hidden="true"
                   className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
                 >
-                  <img
+                  <Image width="5" height="5"
                     src={collection.imageSrc}
                     alt={collection.imageAlt}
                     className="h-full w-full object-cover object-center"
@@ -448,8 +467,8 @@ export function StoreFront() {
         <section aria-labelledby="comfort-heading" className="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/home-page-01-feature-section-02.jpg"
+              <Image width="5" height="5"
+                src={categories[1].imageSrc}
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
@@ -460,7 +479,7 @@ export function StoreFront() {
                   Simple productivity
                 </h2>
                 <p className="mt-3 text-xl text-white">
-                  Endless tasks, limited hours, a single piece of paper. Not really a haiku, but we're doing our best
+                  Endless tasks, limited hours, a single piece of paper. Not really a haiku, but we`&rsquo;`re doing our best
                   here. No kanban boards, burndown charts, or tangled flowcharts with our Focus system. Just the
                   undeniable urge to fill empty circles.
                 </p>
@@ -487,6 +506,8 @@ export function StoreFront() {
                 <div>
                   <h3 className="text-sm font-medium text-white">Shop</h3>
                   <ul role="list" className="mt-6 space-y-6">
+
+                    {/* map */}
                     {footerNavigation.shop.map((item) => (
                       <li key={item.name} className="text-sm">
                         <a href={item.href} className="text-gray-300 hover:text-white">
@@ -499,6 +520,8 @@ export function StoreFront() {
                 <div>
                   <h3 className="text-sm font-medium text-white">Company</h3>
                   <ul role="list" className="mt-6 space-y-6">
+
+                    {/* map */}
                     {footerNavigation.company.map((item) => (
                       <li key={item.name} className="text-sm">
                         <a href={item.href} className="text-gray-300 hover:text-white">
@@ -513,6 +536,8 @@ export function StoreFront() {
                 <div>
                   <h3 className="text-sm font-medium text-white">Account</h3>
                   <ul role="list" className="mt-6 space-y-6">
+
+                    {/* map */}
                     {footerNavigation.account.map((item) => (
                       <li key={item.name} className="text-sm">
                         <a href={item.href} className="text-gray-300 hover:text-white">
@@ -525,6 +550,8 @@ export function StoreFront() {
                 <div>
                   <h3 className="text-sm font-medium text-white">Connect</h3>
                   <ul role="list" className="mt-6 space-y-6">
+
+                    {/* map */}
                     {footerNavigation.connect.map((item) => (
                       <li key={item.name} className="text-sm">
                         <a href={item.href} className="text-gray-300 hover:text-white">
