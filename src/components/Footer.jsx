@@ -46,7 +46,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Joe's Corner. All rights
+            Copyright &copy; {new Date().getFullYear()} Joes Corner. All rights
             reserved.
           </p>
         </div>
