@@ -372,7 +372,7 @@ export function StoreFront() {
             href="#"
             className="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
           >
-            View Joe's Works
+            View Joe`&rsquo;`s Works
           </a>
         </div>
       </div>
@@ -507,14 +507,10 @@ export function StoreFront() {
                 <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Name:</strong> Joe</span>
                 <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Phone:</strong> (919) 888-0029</span>
                 <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Email:</strong> joe@joecorner.com</span></div>
-
-
             </div>
           </div>
         </section>
       </main>
-
-
     </div>
   )
 }
