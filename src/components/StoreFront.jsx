@@ -54,7 +54,7 @@ export function StoreFront() {
 
   return (
     <div className="bg-white">
-      
+
       {/* Mobile menu */}
       <Transition.Root show={mobileMenuOpen} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setMobileMenuOpen}>
@@ -211,7 +211,7 @@ export function StoreFront() {
         {/* Navigation */}
         <header className="relative z-10">
           <nav aria-label="Top">
-  
+
 
             {/* Secondary navigation */}
             <div className="bg-white bg-opacity-10 backdrop-blur-md backdrop-filter">
@@ -269,7 +269,7 @@ export function StoreFront() {
                                       <div className="relative bg-white">
                                         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                                           <div className="grid grid-cols-4 gap-y-10 gap-x-8 py-16">
-                                            
+
                                             {/*                 map                   */}
                                             {category.featured.map((item) => (
                                               <div key={item.name} className="group relative">
@@ -300,7 +300,7 @@ export function StoreFront() {
                           ))}
 
 
-                                          {/* map                  
+                          {/* map                  
                           {navigation.pages.map((page) => (
                             <a
                               key={page.name}
@@ -331,7 +331,7 @@ export function StoreFront() {
                     {/* Logo (lg-) */}
                     <a href="#" className="hidden">
                       <span className="sr-only">Your Company</span>
-                      <Image width="500" height="300" src={services[2].imageSrc}  />
+                      <Image width="500" height="300" alt="third jonpchristie jonchristie.net from its class" src={services[2].imageSrc} />
                     </a>
 
                     <div className="flex flex-1 items-center justify-end">
@@ -350,13 +350,7 @@ export function StoreFront() {
                         </a>
 
                         {/* Cart */}
-                        <div className="ml-4 flow-root lg:ml-8">
-                          <a href="#" className="group -m-2 flex items-center p-2">
-                            <ShoppingBagIcon className="h-6 w-6 flex-shrink-0 text-white" aria-hidden="true" />
-                            <span className="ml-2 text-sm font-medium text-white">0</span>
-                            <span className="sr-only">items in cart, view bag</span>
-                          </a>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -366,8 +360,10 @@ export function StoreFront() {
           </nav>
         </header>
 
+        {/* Hero section */}
+   
         <div className="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-64 lg:px-0">
-          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">New arrivals are here</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">About Joe</h1>
           <p className="mt-4 text-xl text-white">
             The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release
             while they`&rsquo;`re still in stock.
@@ -388,13 +384,13 @@ export function StoreFront() {
             <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
               Shop by Category
             </h2>
-          
+
           </div>
 
           <div className="mt-4 flow-root">
             <div className="-my-2 items-center">
               <div className="flex h-90 items-center py-2 justify-center">
-<div className="flex flex-row items-center">
+                <div className="flex flex-row items-center">
                   {/*                 map                   */}
                   {services.map((category) => (
                     <a
@@ -506,19 +502,19 @@ export function StoreFront() {
             </div>
             <div className="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16 text-white">
               <h2 className="text-3xl font-bold">Get in touch!!!</h2>
-              <hr/>
+              <hr />
               <div className="relative  flex max-w-3xl flex-col  text-left">
                 <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Name:</strong> Joe</span>
                 <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Phone:</strong> (919) 888-0029</span>
                 <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Email:</strong> joe@joecorner.com</span></div>
-                
- 
+
+
             </div>
           </div>
         </section>
       </main>
 
-  
+
     </div>
   )
 }

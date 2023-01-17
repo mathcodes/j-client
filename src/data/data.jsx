@@ -169,31 +169,3 @@ export const collections = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
   },
 ]
-export const footerNavigation = {
-  Original: [
-    { name: 'Bags', href: '#' },
-    { name: 'Tees', href: '#' },
-    { name: 'Objects', href: '#' },
-    { name: 'Home Goods', href: '#' },
-    { name: 'Accessories', href: '#' },
-  ],
-  JoeStyle: [
-    { name: 'Who we are', href: '#' },
-    { name: 'Sustainability', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Terms & Conditions', href: '#' },
-    { name: 'Privacy', href: '#' },
-  ],
-  Custom: [
-    { name: 'Manage Account', href: '#' },
-    { name: 'Returns & Exchanges', href: '#' },
-    { name: 'Redeem a Gift Card', href: '#' },
-  ],
-  connect: [
-    { name: 'Contact Us', href: '#' },
-    { name: 'Twitter', href: '#' },
-    { name: 'Instagram', href: '#' },
-    { name: 'Pinterest', href: '#' },
-  ],
-}

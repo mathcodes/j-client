@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, RadioGroup, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/20/solid'
+import { Image } from 'next/image'
 
 const product = {
   name: '7',
@@ -62,7 +63,7 @@ export default function Modal() {
                   <div className="grid w-full grid-cols-1 items-start gap-y-8 gap-x-6 sm:grid-cols-12 lg:gap-x-8">
                     <div className="sm:col-span-4 lg:col-span-5">
                       <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-100">
-                        <img src={product.imageSrc} alt={product.imageAlt} className="object-cover object-center" />
+                        <Image src={product.imageSrc} alt={product.imageAlt} className="object-cover object-center" />
                       </div>
                     </div>
                     <div className="sm:col-span-8 lg:col-span-7">
