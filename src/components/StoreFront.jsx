@@ -372,7 +372,7 @@ export function StoreFront() {
             href="#"
             className="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
           >
-            Shop New Arrivals
+            View Joe's Works
           </a>
         </div>
       </div>
