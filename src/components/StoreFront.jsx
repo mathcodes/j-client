@@ -1,4 +1,4 @@
-import { footerNavigation, collections, services, navigation, currencies } from '../data/data'
+import { footerNavigation, collections, services, navigation, currencies, servicePackages } from '../data/data'
 import { Fragment, useState } from 'react'
 import Image from 'next/image'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
@@ -9,45 +9,11 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { Modal } from './Modal'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
-const mod = (`
-  <div 
-        x-data="{ open: false }"
-        x-show.transition.duration.500ms="open"
-        x-init="() => { setTimeout(() => { open = true }, 3000); }"
-        class="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center px-4 md:px-0"
-    >
-        <div class="flex flex-col max-w-lg bg-white shadow-2xl rounded-lg border-2 border-gray-400 p-6" @click.away="open = false">
-            <div class="flex justify-between mb-4">
-                <h3 class="font-bold text-2xl">Welcome! 🚀</h3>
-                <button @click="open = false">
-                    <svg version="1.1" id="Capa_1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
-                        <g>
-                            <g>
-                                <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
-                                    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
-                                    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
-                                    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
-                                    L284.286,256.002z"/>
-                            </g>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-            <div class="">
-                <p class="text-center mb-6">Your content goes here! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu rutrum lorem.</p>
-                <img class="w-full h-64" src="https://images.pexels.com/photos/954599/pexels-photo-954599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-            </div>
-        </div>
-    </div>`
-)
 
 export function StoreFront() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -91,7 +57,6 @@ export function StoreFront() {
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
-
                 {/* Links */}
                 <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200">
@@ -199,20 +164,9 @@ export function StoreFront() {
       {/* Hero section */}
       <div className="relative bg-gray-900">
         {/* Decorative image and overlay */}
-        <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          <Image width="500" height="50"
-            src={services[1].imageSrc}
-            alt=""
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
-        <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
-
         {/* Navigation */}
         <header className="relative z-10">
           <nav aria-label="Top">
-
-
             {/* Secondary navigation */}
             <div className="bg-white bg-opacity-10 backdrop-blur-md backdrop-filter">
               <div className="mx-auto max-w-7xl px-4 sm:px-4 lg:px-8">
@@ -222,11 +176,11 @@ export function StoreFront() {
                     <div className="hidden lg:flex lg:flex-1 lg:items-center">
                       <a href="#">
                         <span className="sr-only">tailwind SERVICES</span>
-                        <Image width="500" height="300"
+                        {/* <Image width="500" height="300"
                           className="h-8 w-auto md:inline-block  hidden "
                           src={services[0].imageSrc}
                           alt=""
-                        />
+                        /> */}
                       </a>
                     </div>
 
@@ -350,7 +304,7 @@ export function StoreFront() {
                         </a>
 
                         {/* Cart */}
-                        
+
                       </div>
                     </div>
                   </div>
@@ -361,156 +315,173 @@ export function StoreFront() {
         </header>
 
         {/* Hero section */}
-   
-        <div className="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-64 lg:px-0">
-          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">About Joe</h1>
-          <p className="mt-4 text-xl text-white">
-            The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release
-            while they`&rsquo;`re still in stock.
-          </p>
-          <a
-            href="#"
-            className="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
-          >
-            View Joe`&rsquo;`s Works
-          </a>
-        </div>
-      </div>
 
-      <main>
-        {/* Category section */}
-        <section aria-labelledby="category-heading" className="pt-24 sm:pt-32 xl:mx-auto xl:max-w-7xl xl:px-8">
-          <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
-            <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
-              Shop by Category
-            </h2>
+        <div class="pt-60 flex flex-wrap">
 
+          <div className="pt-60 xs:w-1/3 p-4">
+            Lorem ipsum
           </div>
-
-          <div className="mt-4 flow-root">
-            <div className="-my-2 items-center">
-              <div className="flex h-90 items-center py-2 justify-center">
-                <div className="flex flex-row items-center">
-                  {/*                 map                   */}
-                  {services.map((category) => (
-                    <a
-                      key={category.name}
-                      href={category.href}
-                      className="relative flex h-40 w-56 m-2 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
-                    >
-                      <span aria-hidden="true" className="absolute inset-0 p-2">
-                        <Image width="80" height="300" src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
-                      </span>
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
-                      />
-                      <span className="relative mt-auto text-center text-xl font-bold text-white">{category.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6 px-4 sm:hidden">
-            <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
-              Browse all services
-              <span aria-hidden="true"> &rarr;</span>
+          <div className="xs:w-2/3"><img className="aspect-square ..." src="https://www.jonchristie.net/favicon.png" width="50px" />
+            <a
+              href="#"
+              className="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
+            >
+              About Joe
             </a>
           </div>
-        </section>
+        </div>
+        </div>
 
-        {/* Featured section */}
-        <section
-          aria-labelledby="social-impact-heading"
-          className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 sm:pt-32 lg:px-8"
-        >
-          <div className="relative overflow-hidden rounded-lg">
-            <div className="absolute inset-0">
-              <Image width="500" height="300"
-                src={services[0].imageSrc}
-                alt=""
-                className="h-full w-full object-cover object-contain"
-              />
+        <main>
+          {/* Category section */}
+          <section container aria-labelledby="category-heading" className="pt-24 sm:pt-32 xl:mx-auto xl:max-w-7xl xl:px-8">
+            <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
+              <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
+                Shop by Category
+              </h2>
+
             </div>
-            <div className="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16">
-              <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-                <h2 id="social-impact-heading" className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  <span className="block sm:inline">Level up</span>
-                  <span className="block sm:inline">your desk</span>
-                </h2>
-                <p className="mt-3 text-xl text-white">
-                  Make your desk beautiful and organized. Post a picture to social media and watch it get more likes
-                  than life-changing announcements. Reflect on the shallow nature of existence. At least you have a
-                  really nice desk setup.
-                </p>
-                <a
-                  href="#"
-                  className="mt-8 block w-full rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
-                >
-                  Shop Workspace
-                </a>
+            <div class="flex flex-wrap">
+              {servicePackages.map((p) => (
+                <div class="xs:w-full lg:w-1/4 md:w-1/3 sm:w-1/2  p-4">
+
+                  <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-medium">{p.name}</h3>
+                    <p>{p.description}</p>
+                    <p class="font-medium text-red-500">${p.price}/month</p>
+                    <div class="flex items-center mt-4">
+                      <button class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600">Learn More</button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 flow-root">
+              <div className="-my-2 items-center">
+                <div className="flex h-90 items-center py-2 justify-center">
+                  <div className="flex flex-row items-center">
+                    {/*                 map                   */}
+                    {services.map((category) => (
+                      <a
+                        key={category.name}
+                        href={category.href}
+                        className="relative flex h-40 w-56 m-2 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
+                      >
+                        <span aria-hidden="true" className="absolute inset-0 p-2">
+                          <Image width="80" height="300" src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
+                        </span>
+                        <span
+                          aria-hidden="true"
+                          className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                        />
+                        <span className="relative mt-auto text-center text-xl font-bold text-white">{category.name}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Gallery Gallery Gallery Gallery */}
-        <section
-          aria-labelledby="collection-heading"
-          className="mx-auto max-w-xl px-4 pt-24 sm:px-6 sm:pt-32 lg:max-w-7xl lg:px-8"
-        >
-          <h2 id="collection-heading" className="text-2xl font-bold tracking-tight text-gray-900">
-            Gallery
-          </h2>
-          <p className="mt-4 text-base text-gray-500">
-            Each season, we collaborate with world-class designers to create a collection inspired by the natural world.
-          </p>
-
-          <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
-
-            {/*                 map                   */}
-            {collections.map((collection) => (
-              <a key={collection.name} href={collection.href} className="group block">
-                <div
-                  aria-hidden="true"
-                  className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
-                >
-                  <Image width="500" height="300"
-                    src={collection.imageSrc}
-                    alt={collection.imageAlt}
-                    className="h-full w-full object-cover object-center"
-                  />
-                </div>
-                <h3 className="mt-4 text-base font-semibold text-gray-900">{collection.name}</h3>
-                <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
+            <div className="mt-6 px-4 sm:hidden">
+              <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+                Browse all services
+                <span aria-hidden="true"> &rarr;</span>
               </a>
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
 
-        {/* Featured section */}
-        <section aria-labelledby="comfort-heading" className="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-lg">
-            <div className="absolute inset-0">
-              <Image width="500" height="300"
-                src={services[1].imageSrc}
-                alt=""
-                className="h-full w-full object-cover object-center"
-              />
+          {/* Featured section */}
+          <section
+            aria-labelledby="social-impact-heading"
+            className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 sm:pt-32 lg:px-8"
+          >
+            <div className="relative overflow-hidden rounded-lg">
+              <div className="absolute inset-0">
+                <Image width="500" height="300"
+                  src={services[0].imageSrc}
+                  alt=""
+                  className="h-full w-full object-cover object-contain"
+                />
+              </div>
+              <div className="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16">
+                <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
+                  <h2 id="social-impact-heading" className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    <span className="block sm:inline">Level up</span>
+                    <span className="block sm:inline">your desk</span>
+                  </h2>
+                  <p className="mt-3 text-xl text-white">
+                    Make your desk beautiful and organized. Post a picture to social media and watch it get more likes
+                    than life-changing announcements. Reflect on the shallow nature of existence. At least you have a
+                    really nice desk setup.
+                  </p>
+                  <a
+                    href="#"
+                    className="mt-8 block w-full rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
+                  >
+                    Shop Workspace
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16 text-white">
-              <h2 className="text-3xl font-bold">Get in touch!!!</h2>
-              <hr />
-              <div className="relative  flex max-w-3xl flex-col  text-left">
-                <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Name:</strong> Joe</span>
-                <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Phone:</strong> (919) 888-0029</span>
-                <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Email:</strong> joe@joecorner.com</span></div>
+          </section>
+
+          {/* Gallery Gallery Gallery Gallery */}
+          <section
+            aria-labelledby="collection-heading"
+            className="mx-auto max-w-xl px-4 pt-24 sm:px-6 sm:pt-32 lg:max-w-7xl lg:px-8"
+          >
+            <h2 id="collection-heading" className="text-2xl font-bold tracking-tight text-gray-900">
+              Gallery
+            </h2>
+            <p className="mt-4 text-base text-gray-500">
+              Each season, we collaborate with world-class designers to create a collection inspired by the natural world.
+            </p>
+
+            <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+
+              {/*                 map                   */}
+              {collections.map((collection) => (
+                <a key={collection.name} href={collection.href} className="group block">
+                  <div
+                    aria-hidden="true"
+                    className="aspect-w-3 aspect-h-2 overflow-hidden rounded-lg group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
+                  >
+                    <Image width="500" height="300"
+                      src={collection.imageSrc}
+                      alt={collection.imageAlt}
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                  <h3 className="mt-4 text-base font-semibold text-gray-900">{collection.name}</h3>
+                  <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
+                </a>
+              ))}
             </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  )
-}
+          </section>
+
+          {/* Featured section */}
+          <section aria-labelledby="comfort-heading" className="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <div className="relative overflow-hidden rounded-lg">
+              <div className="absolute inset-0">
+                <Image width="500" height="300"
+                  src={services[0].imageSrc}
+                  alt=""
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+              <div className="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16 text-white">
+                <h2 className="text-3xl font-bold">Get in touch!!!</h2>
+                <hr />
+                <div className="relative  flex max-w-3xl flex-col  text-left">
+                  <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Name:</strong> Joe</span>
+                  <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Phone:</strong> (919) 888-0029</span>
+                  <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Email:</strong> joe@joecorner.com</span></div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      </div>
+    )
+  }
