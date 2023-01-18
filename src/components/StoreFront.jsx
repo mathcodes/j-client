@@ -321,7 +321,8 @@ export function StoreFront() {
           <div className="pt-60 xs:w-1/3 p-4">
             Lorem ipsum
           </div>
-          <div className="xs:w-2/3"><img className="aspect-square ..." src="https://www.jonchristie.net/favicon.png" width="50px" />
+          <div className="xs:w-2/3">
+            <Image key="jonchristie.net" alt="jonchristie.net" className="aspect-square ..." src="https://www.jonchristie.net/favicon.png" width="50px" />
             <a
               href="#"
               className="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
@@ -343,8 +344,7 @@ export function StoreFront() {
             </div>
             <div class="flex flex-wrap">
               {servicePackages.map((p) => (
-                <div class="xs:w-full lg:w-1/4 md:w-1/3 sm:w-1/2  p-4">
-
+                <div key={p.key} class="xs:w-full lg:w-1/4 md:w-1/3 sm:w-1/2 p-4">
                   <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-lg font-medium">{p.name}</h3>
                     <p>{p.description}</p>
