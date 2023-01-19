@@ -1,7 +1,7 @@
 
 import { Fragment } from 'react'
 import { Menu, Popover, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const user = {
   name: 'Joe the Cook',
@@ -55,7 +55,6 @@ export default function Example() {
                       className="flex-shrink-0 rounded-full p-1 text-indigo-200 hover:bg-white hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                     >
                       <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
 
                     {/* Profile dropdown */}
@@ -165,7 +164,7 @@ export default function Example() {
                             <div>
                               <img
                                 className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                src="https://www.jonchristie.net/favicon.png"
                                 alt="Your Company"
                               />
                             </div>
@@ -178,34 +177,34 @@ export default function Example() {
                           </div>
                           <div className="mt-3 space-y-1 px-2">
                             <a
-                              href="#"
+                              href="#original"
                               className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                             >
-                              Home
+                              Original
                             </a>
                             <a
-                              href="#"
+                              href="#joeStyle"
                               className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                             >
-                              Profile
+                              Joe Style
                             </a>
                             <a
-                              href="#"
+                              href="#customWorks"
                               className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                             >
-                              Resources
+                              Custom Works
                             </a>
                             <a
-                              href="#"
+                              href="#weeklySpecials"
                               className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                             >
-                              Company Directory
+                              Weekly Specials
                             </a>
                             <a
-                              href="#"
+                              href="#contact"
                               className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                             >
-                              Openings
+                              Contact
                             </a>
                           </div>
                         </div>
@@ -223,7 +222,6 @@ export default function Example() {
                               className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             >
                               <span className="sr-only">View notifications</span>
-                              <BellIcon className="h-6 w-6" aria-hidden="true" />
                             </button>
                           </div>
                           <div className="mt-3 space-y-1 px-2">
