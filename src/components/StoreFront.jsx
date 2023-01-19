@@ -1,6 +1,7 @@
 import { footerNavigation, collections, services, navigation, currencies } from '../data/data'
 import { Fragment, useState } from 'react'
 import Image from 'next/image'
+import LandingLayout from '../components/LandingLayout'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -54,7 +55,7 @@ export function StoreFront() {
 
   return (
     <div className="bg-white">
-
+      <LandingLayout />
       {/* Mobile menu */}
       <Transition.Root show={mobileMenuOpen} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setMobileMenuOpen}>
@@ -201,178 +202,27 @@ export function StoreFront() {
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <Image width="500" height="50"
-            src={services[1].imageSrc}
+            src={collections[3].imageSrc}
             alt=""
             className="h-full w-full object-cover object-center"
           />
         </div>
         <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
 
-        {/* Navigation */}
-        <header className="relative z-10">
-          <nav aria-label="Top">
-
-
-            {/* Secondary navigation */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-md backdrop-filter">
-              <div className="mx-auto max-w-7xl px-4 sm:px-4 lg:px-8">
-                <div>
-                  <div className="flex h-16 items-center justify-between">
-                    {/* Logo (lg+) */}
-                    <div className="hidden lg:flex lg:flex-1 lg:items-center">
-                      <a href="#">
-                        <span className="sr-only">tailwind SERVICES</span>
-                        <Image width="500" height="300"
-                          className="h-8 w-auto md:inline-block  hidden "
-                          src={services[0].imageSrc}
-                          alt=""
-                        />
-                      </a>
-                    </div>
-
-                    <div className="hidden h-full lg:flex">
-                      {/* Flyout menus */}
-                      <Popover.Group className="inset-x-0 bottom-0 px-4">
-                        <div className="flex h-full justify-center space-x-8">
-
-                          {/*                 map                   */}
-                          {navigation.services.map((category) => (
-                            <Popover key={category.name} className="flex">
-                              {({ open }) => (
-                                <>
-                                  <div className="relative flex">
-                                    <Popover.Button className="relative z-10 flex items-center justify-center text-sm font-medium text-white transition-colors duration-200 ease-out">
-                                      {category.name}
-                                      <span
-                                        className={classNames(
-                                          open ? 'bg-white' : '',
-                                          'absolute inset-x-0 -bottom-px h-0.5 transition duration-200 ease-out'
-                                        )}
-                                        aria-hidden="true"
-                                      />
-                                    </Popover.Button>
-                                  </div>
-
-                                  <Transition
-                                    as={Fragment}
-                                    enter="transition ease-out duration-200"
-                                    enterFrom="opacity-0"
-                                    enterTo="opacity-100"
-                                    leave="transition ease-in duration-150"
-                                    leaveFrom="opacity-100"
-                                    leaveTo="opacity-0"
-                                  >
-                                    <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
-                                      {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
-                                      <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
-
-                                      <div className="relative bg-white">
-                                        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                                          <div className="grid grid-cols-4 gap-y-10 gap-x-8 py-16">
-
-                                            {/*                 map                   */}
-                                            {category.featured.map((item) => (
-                                              <div key={item.name} className="group relative">
-                                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                                  <Image width="500" height="300"
-                                                    src={item.imageSrc}
-                                                    alt={item.imageAlt}
-                                                    className="object-cover object-center"
-                                                  />
-                                                </div>
-                                                <a href={item.href} className="mt-4 block font-medium text-gray-900">
-                                                  <span className="absolute inset-0 z-10" aria-hidden="true" />
-                                                  {item.name}
-                                                </a>
-                                                <p aria-hidden="true" className="mt-1">
-                                                  Shop now
-                                                </p>
-                                              </div>
-                                            ))}
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </Popover.Panel>
-                                  </Transition>
-                                </>
-                              )}
-                            </Popover>
-                          ))}
-
-
-                          {/* map                  
-                          {navigation.pages.map((page) => (
-                            <a
-                              key={page.name}
-                              href={page.href}
-                              className="flex items-center text-sm font-medium text-white"
-                            >
-                              {page.name}
-                            </a>
-                          ))} */}
-                        </div>
-                      </Popover.Group>
-                    </div>
-
-                    {/* Mobile menu and search (lg-) */}
-                    <div className="flex flex-1 items-center lg:hidden">
-                      <button type="button" className="-ml-2 p-2 text-white" onClick={() => setMobileMenuOpen(true)}>
-                        <span className="sr-only">Open menu</span>
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                      </button>
-
-                      {/* Search */}
-                      <a href="#" className="ml-2 p-2 text-white">
-                        <span className="sr-only">Search</span>
-                        <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-                      </a>
-                    </div>
-
-                    {/* Logo (lg-) */}
-                    <a href="#" className="hidden">
-                      <span className="sr-only">Your Company</span>
-                      <Image width="500" height="300" alt="third jonpchristie jonchristie.net from its class" src={services[2].imageSrc} />
-                    </a>
-
-                    <div className="flex flex-1 items-center justify-end">
-                      <a href="#" className="hidden text-sm font-medium text-white lg:block">
-                        Search
-                      </a>
-
-                      <div className="flex items-center lg:ml-8">
-                        {/* Help */}
-                        <a href="#" className="p-2 text-white lg:hidden">
-                          <span className="sr-only">Help</span>
-                          <QuestionMarkCircleIcon className="h-6 w-6" aria-hidden="true" />
-                        </a>
-                        <a href="#" className="hidden text-sm font-medium text-white lg:block">
-                          Help
-                        </a>
-
-                        {/* Cart */}
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </header>
+ 
 
         {/* Hero section */}
    
         <div className="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-64 lg:px-0">
-          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">About Joe</h1>
           <p className="mt-4 text-xl text-white">
             The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release
-            while they`&rsquo;`re still in stock.
+            while they&rsquo;re still in stock.
           </p>
           <a
             href="#"
             className="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
           >
-            View Joe`&rsquo;`s Works
+            View Joe&rsquo;s Works
           </a>
         </div>
       </div>
@@ -504,9 +354,9 @@ export function StoreFront() {
               <h2 className="text-3xl font-bold">Get in touch!!!</h2>
               <hr />
               <div className="relative  flex max-w-3xl flex-col  text-left">
-                <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Name:</strong> Joe</span>
-                <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Phone:</strong> (919) 888-0029</span>
-                <span id="comfort-heading" className="text-xl font-bold tracking-tight  "> <strong>Email:</strong> joe@joecorner.com</span></div>
+                <span id="contact" className="text-xl font-bold tracking-tight  "> <strong>Name:</strong> Joe</span>
+                <span id="contact" className="text-xl font-bold tracking-tight  "> <strong>Phone:</strong> (919) 888-0029</span>
+                <span id="contact" className="text-xl font-bold tracking-tight  "> <strong>Email:</strong> joe@joecorner.com</span></div>
             </div>
           </div>
         </section>
