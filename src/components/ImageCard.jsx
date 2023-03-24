@@ -7,11 +7,11 @@ function ImageCard({ image, setSelectedImage }) {
         src={image.src}
         alt={image.alt}
         onClick={() => setSelectedImage(image)}
-        className="object-cover object-center w-full h-56 transition-all duration-500 cursor-pointer sm:h-64 md:h-80 lg:h-96 hover:opacity-75"
+        className="object-cover object-center w-full h-56 transition-all duration-500 cursor-pointer sm:h-40 md:h-64 lg:h-80 hover:opacity-75"
       />
       <div className="p-4">
-        <h2 className="mb-2 text-lg font-bold">{image.title}</h2>
-        <p className="text-gray-700">{image.description}</p>
+        <h2 className="mb-2 text-lg font-bold text-center">{image.title}</h2>
+        {/* <p className="text-gray-700">{image.description}</p> */}
       </div>
     </div>
   );
